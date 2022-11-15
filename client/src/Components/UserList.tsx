@@ -8,17 +8,13 @@ interface UserListProps {
 }
 
 export const UserList = ({ data, country }: UserListProps) => {
-  const [userList, setUserList] = useState<User[]>([]);
-
-  useEffect(() => {
-    const newUserList = data?.countries.find(
-      (ct: Country) => ct.name === country
-    );
-    if (newUserList) {
-      setUserList(newUserList.users);
-    }
-  }, [country]);
-  console.log( 'this is userList', userList);
-
-  return (<div>{userList.map((user:User)=> <SingleUser key={user.name} user={user}/>)}</div>);
+  return (
+    <div>
+      {data?.countries
+        .filter((c) => c.name === country)
+        .flatMap((c) =>
+          c.users.map((u) => <SingleUser key={u.name} user={u} />)
+        )}
+    </div>
+  );
 };

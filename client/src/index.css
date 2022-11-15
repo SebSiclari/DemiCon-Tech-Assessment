@@ -1,13 +1,38 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  height: 100%;
+  background-color: #0066FF;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+#Header{
+  background-color: #0066FF;
+  height: 100px;
+  background:url('./logo/demicon-logo-1.png') no-repeat center;
+}
+
+#formBox{
+  padding-top: 15px;
+  margin:auto;
+  width:50%;
+  border:5px solid;
+  display:flex;
+  justify-content: center;
+  color:white;
+  text-align: center;
+  font-family: sans-serif;
+}
+
+#singleUser{
+  padding-top:10px;
+  border: 5px solid;
+  border-color:white;
+  border-radius: 2px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  width: 50%;
 }

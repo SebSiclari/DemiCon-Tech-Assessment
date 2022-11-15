@@ -9,9 +9,10 @@ export const SingleUser = ({user}:userProps) => {
   const {name, email, gender} = user
 
   return (
-    <div><p>Name: {name}</p><br></br>
-    <p>Email: {email}</p> <br></br>
-    <p>Gender: {gender}</p><br></br>
+    <div id="singleUser">
+    <p>Name: {name}</p>
+    <p>Email: {email}</p>
+    <p>Gender: {gender}</p>
     </div>
   )
 }

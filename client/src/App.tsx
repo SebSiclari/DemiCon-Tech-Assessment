@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import { User, UserAPI } from "./types/User";
 import {Button} from "./Components/Button"
 import { UserList } from "./Components/UserList";
+import {Header} from './Components/Header'
 
 function App() {
   const [data, setData] = useState<UserAPI>();
@@ -23,12 +24,17 @@ function App() {
     fetchData();
   }, []);
 
+  useEffect(()=>{
+    console.log(country)
+  },[country]);
+
   console.log("data", data);
   console.log("countries", countries);
 
-  // setCountry={setCountry}  country={country}
 
-  return ( <><ComboBox  setCountry={setCountry} country={country} countries={countries} />
+  return ( <>
+  <Header />
+  <ComboBox  setCountry={setCountry} country={country} countries={countries} />
   <Button/>
   <UserList data={data} country={country} />
   </>
