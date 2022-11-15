@@ -8,11 +8,13 @@ interface userProps {
 export const SingleUser = ({ user }: userProps) => {
   const { name, email, gender } = user;
 
-  return (
-    <div id="singleUser">
-      <p>Name: {name}</p>
-      <p>Email: {email}</p>
-      <p>Gender: {gender}</p>
-    </div>
+  return (<>
+    <ul id="singleUser">
+      <li>Name: {name}</li> <br></br>
+      <li>Email: {email}</li><br></br>
+      <li>Gender: {gender}</li>
+    </ul>
+    <br></br>
+    </>
   );
 };

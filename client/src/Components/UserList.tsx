@@ -11,7 +11,7 @@ export const UserList = ({ data, country }: UserListProps) => {
     <div>
       {data?.countries.flatMap((c) =>
         c.name === country
-          ? c.users.map((u) => <SingleUser key={u.name} user={u} />)
+          ? c.users.map((u) => <SingleUser key={u.email} user={u} />)
           : []
       )}
     </div>

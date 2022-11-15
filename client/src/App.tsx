@@ -3,7 +3,6 @@ import { ComboBox } from "./Components/ComboBox";
 import { getData } from "./utils/apiService";
 import { useState, useEffect } from "react";
 import { Country } from "./types/Country";
-import { Button } from "./Components/Button";
 import { UserList } from "./Components/UserList";
 import { Header } from "./Components/Header";
 
@@ -31,7 +30,6 @@ function App() {
         country={country}
         countries={countries}
       />
-      <Button />
       <UserList data={data} country={country} />
     </>
   );
