@@ -1,4 +1,4 @@
-# DemiCon Full-Stack Application
+# DEMICON Full-Stack Application
 
 ## HOW TO START THE APP
 ### Client
